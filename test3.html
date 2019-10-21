@@ -1,0 +1,40 @@
+<!-- 
+<script type="text/javascript">
+    //$를 함수의 지역변수로 선언해서 외부에 있을지 모르는 타 라이브러리의 $와의 충돌을 예방
+    (function ($) {
+        $('body').html('hello world');
+    })(jQuery) //함수를 선언함과 동시에 바로 사용
+</script>
+-->
+
+<!--jQuery(selector, [context])
+<html>
+    <body>
+        <ul>
+            <li>test2</li>
+        </ul>
+        <ul class="foo">
+            <li>test</li>
+        </ul>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            (function($){            
+                $('ul.foo').click( function() {
+                    $('li', this).css('background-color','red');
+                });//this라는 것은 이벤트를 발생시킨 앨리먼트
+            })(jQuery)
+        </script>
+    </body>
+</html>
+--> 
+
+<!-- jQuery(element)
+<html>
+    <body>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document.body).css( "background-color", "black" );
+        </script>
+    </body>
+</html>
+-->
